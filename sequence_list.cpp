@@ -1,10 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include "common.h"
-#define LIST_ELEM_SIZE 100  // 线性表存储空间的初始分配量
-#define LIST_INCREMENT 10 // 线性表存储空间的分配增量
 
-typedef int ElemType;
+#include "common.h"
 
 typedef struct{
 	ElemType *elem;  //存储空间基址
