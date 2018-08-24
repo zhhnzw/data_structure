@@ -16,6 +16,26 @@ void about_pointer(){
     printf("%p, %p\n", i, &i);  // %p 为指针类型输出其关联的地址, 那%p格式输出的i是什么玩意？？？
 }
 
+// 引用参数实现交换
+void swap(int *a, int *b){
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// 引用参数实现交换
+void swap1(int &a, int &b){
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
 int main(){
 	about_pointer();
+	int a = 1, b = 2;
+    swap(&a, &b);
+    swap1(a, b);
+    printf("%d %d\n",a,b);
 }
